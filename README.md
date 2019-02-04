@@ -5,6 +5,14 @@ SamJSON is a JSON Library that was created to be used by Modders of UnrealEngine
 
 ![](Screenshot_0.png)
 
+## Features
+* You can **Parse a JSON String into a SamJSON Object** and get all the Properties or Array Items from it using the provided _GetPropertyAsX/GetArrayAsX_ functions
+* You can **Create a new empty SamJSON Object**, populate it with data using one of the _AddXProperty/AddXToArray_ functions and **generate a JSON string** out of it by calling _GetJSONString_
+* You can **Change values of Properties** of a existing SamJSON object by using the provided _SetXProperty_ functions
+* PrettyPrint - generate a nicely formated JSON string to print to logs, console or UI
+
+![](Screenshot_2.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the assets needed to use samJSON in your own Mod Project.
@@ -22,21 +30,21 @@ UnrealEngine (Full or the DevKit of one of the supported games)
 
 ### Asset List (BP - Blueprint)
 
-* /ArkZeroRP/SamJSON/SamJSON.uasset - [#f03c15]REQUIRED
+* /ArkZeroRP/SamJSON/SamJSON.uasset - ![#f03c15](REQUIRED)
 _The library BP based of Object_
-* /ArkZeroRP/SamJSON/SamJSON_ExampleSingleton.uasset - [#1589F0]OPTIONAL
+* /ArkZeroRP/SamJSON/SamJSON_ExampleSingleton.uasset - ![#1589F0](OPTIONAL)
 _Examples singleton BP based of Actor_
-* /ArkZeroRP/SamJSON/Enums/SamJSON_DataType.uasset - [#f03c15]REQUIRED
+* /ArkZeroRP/SamJSON/Enums/SamJSON_DataType.uasset - ![#f03c15](REQUIRED)
 _Enum BP, possible types of Properties or Array Items_
-* /ArkZeroRP/SamJSON/Enums/SamJSON_ValueErrorType.uasset - [#f03c15]REQUIRED
+* /ArkZeroRP/SamJSON/Enums/SamJSON_ValueErrorType.uasset - ![#f03c15](REQUIRED)
 _Enum BP, possible types of Errors when using GetPropertyAsX_
-* /ArkZeroRP/SamJSON/Structs/SamJSON_KeyValue.uasset - [#f03c15]REQUIRED
+* /ArkZeroRP/SamJSON/Structs/SamJSON_KeyValue.uasset - ![#f03c15](REQUIRED)
 _Struct BP, represents a single property as Key/Value/Type_
-* /ArkZeroRP/SamJSON/Structs/Z_BoolMap.uasset - [#f03c15]REQUIRED
+* /ArkZeroRP/SamJSON/Structs/Z_BoolMap.uasset - ![#f03c15](REQUIRED)
 _Struct BP, represents a property as Key(String)/Value(Boolean) - Used for bulk adding of properties to a SamJSON object_
-* /ArkZeroRP/SamJSON/Structs/Z_NumberMap.uasset - [#f03c15]REQUIRED
+* /ArkZeroRP/SamJSON/Structs/Z_NumberMap.uasset - ![#f03c15](REQUIRED)
 _Struct BP, represents a property as Key(String)/Value(Float) - Used for bulk adding of properties to a SamJSON object_
-* /ArkZeroRP/SamJSON/Structs/Z_StringMap.uasset - [#f03c15]REQUIRED
+* /ArkZeroRP/SamJSON/Structs/Z_StringMap.uasset - ![#f03c15](REQUIRED)
 _Struct BP, represents a property as Key(String)/Value(String) - Used for bulk adding of properties to a SamJSON object_
 
 ### Usage example
@@ -44,7 +52,12 @@ _Struct BP, represents a property as Key(String)/Value(String) - Used for bulk a
 * Open "SamJSON_ExampleSingleton" to see examples of how to use the "SamJSON" Blueprint that is the JSON Library itself
 * (ARK/ATLAS)You can add "SamJSON_ExampleSingleton" to your singletons list in the PrimalGameData to execute it in PIE and see the examples in action
 
+Parse a JSON String into SamJSON Object and query Properties
+![](Screenshot_0.png)
 ![](Screenshot_1.png)
+
+Create a new SamJSON Object and populate it with data
+![](Screenshot_3.png)
 
 ## Release History
 
@@ -63,8 +76,6 @@ _Struct BP, represents a property as Key(String)/Value(String) - Used for bulk a
 **Samir (SamKO) Šupčić** – [ArkZeroRP](https://arkzerorp.com/) - [@SamKO_ArkZero](https://twitter.com/SamKO_ArkZero) - [@SamirSupcic](https://twitter.com/SamirSupcic)
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
 
 ## Contributing
 

@@ -30,22 +30,22 @@ UnrealEngine (Full or the DevKit of one of the supported games)
 
 ### Asset List (BP - Blueprint)
 
-* /ArkZeroRP/SamJSON/SamJSON.uasset - ![#f03c15](REQUIRED)
-_The library BP based of Object_
-* /ArkZeroRP/SamJSON/SamJSON_ExampleSingleton.uasset - ![#1589F0](OPTIONAL)
-_Examples singleton BP based of Actor_
-* /ArkZeroRP/SamJSON/Enums/SamJSON_DataType.uasset - ![#f03c15](REQUIRED)
-_Enum BP, possible types of Properties or Array Items_
-* /ArkZeroRP/SamJSON/Enums/SamJSON_ValueErrorType.uasset - ![#f03c15](REQUIRED)
-_Enum BP, possible types of Errors when using GetPropertyAsX_
-* /ArkZeroRP/SamJSON/Structs/SamJSON_KeyValue.uasset - ![#f03c15](REQUIRED)
-_Struct BP, represents a single property as Key/Value/Type_
-* /ArkZeroRP/SamJSON/Structs/Z_BoolMap.uasset - ![#f03c15](REQUIRED)
-_Struct BP, represents a property as Key(String)/Value(Boolean) - Used for bulk adding of properties to a SamJSON object_
-* /ArkZeroRP/SamJSON/Structs/Z_NumberMap.uasset - ![#f03c15](REQUIRED)
-_Struct BP, represents a property as Key(String)/Value(Float) - Used for bulk adding of properties to a SamJSON object_
-* /ArkZeroRP/SamJSON/Structs/Z_StringMap.uasset - ![#f03c15](REQUIRED)
-_Struct BP, represents a property as Key(String)/Value(String) - Used for bulk adding of properties to a SamJSON object_
+* /ArkZeroRP/SamJSON/SamJSON.uasset - :red_circle:REQUIRED
+  >The library BP based of Object
+* /ArkZeroRP/SamJSON/SamJSON_ExampleSingleton.uasset - :large_blue_circle:OPTIONAL
+  >Examples singleton BP based of Actor
+* /ArkZeroRP/SamJSON/Enums/SamJSON_DataType.uasset - :red_circle:REQUIRED
+  >Enum BP, possible types of Properties or Array Items
+* /ArkZeroRP/SamJSON/Enums/SamJSON_ValueErrorType.uasset - :red_circle:REQUIRED
+  >Enum BP, possible types of Errors when using GetPropertyAsX
+* /ArkZeroRP/SamJSON/Structs/SamJSON_KeyValue.uasset - :red_circle:REQUIRED
+  >Struct BP, represents a single property as Key/Value/Type
+* /ArkZeroRP/SamJSON/Structs/Z_BoolMap.uasset - :red_circle:REQUIRED
+  >Struct BP, represents a property as Key(String)/Value(Boolean) - Used for bulk adding of properties to a SamJSON object
+* /ArkZeroRP/SamJSON/Structs/Z_NumberMap.uasset - :red_circle:REQUIRED
+  >Struct BP, represents a property as Key(String)/Value(Float) - Used for bulk adding of properties to a SamJSON object
+* /ArkZeroRP/SamJSON/Structs/Z_StringMap.uasset - :red_circle:REQUIRED
+  >Struct BP, represents a property as Key(String)/Value(String) - Used for bulk adding of properties to a SamJSON object
 
 ### Usage example
 

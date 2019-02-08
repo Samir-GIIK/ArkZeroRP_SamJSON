@@ -9,6 +9,7 @@ SamJSON is a JSON Library that was created to be used by Modders of UnrealEngine
 * You can **Parse a JSON String into a SamJSON Object** and get all the Properties or Array Items from it using the provided _GetPropertyAsX/GetArrayAsX_ functions
 * You can **Create a new empty SamJSON Object**, populate it with data using one of the _AddXProperty/AddXToArray_ functions and **generate a JSON string** out of it by calling _GetJSONString_
 * You can **Change values of Properties** of a existing SamJSON object by using the provided _SetXProperty_ functions
+* Dirty Properties - generate a JSON string that contain only properties that had their values changed after the initial parse
 * PrettyPrint - generate a nicely formated JSON string to print to logs, console or UI
 
 ![](Screenshot_2.png)
@@ -34,8 +35,8 @@ UnrealEngine (Full or the DevKit of one of the supported games)
   >The library BP based of Object
 * /ArkZeroRP/SamJSON/SamJSON_ExampleSingleton.uasset - :large_blue_circle:OPTIONAL
   >Examples singleton BP based of Actor
-* /ArkZeroRP/SamJSON/Enums/SamJSON_DataType.uasset - :red_circle:REQUIRED
-  >Enum BP, possible types of Properties or Array Items
+* /ArkZeroRP/SamJSON/Enums/SamJSON_Type.uasset - :red_circle:REQUIRED
+  >Enum BP, possible types of JSON Data
 * /ArkZeroRP/SamJSON/Enums/SamJSON_ValueErrorType.uasset - :red_circle:REQUIRED
   >Enum BP, possible types of Errors when using GetPropertyAsX
 * /ArkZeroRP/SamJSON/Structs/SamJSON_KeyValue.uasset - :red_circle:REQUIRED
@@ -61,10 +62,17 @@ Create a new SamJSON Object and populate it with data
 
 ## Release History
 
+* 08.02.2019
+	* Major rework on the parsing logic to follow the JSON standards and increase parsing success over 95%
+	* FIX: Failing to parse valid JSON with escaped characters 
+	* FIX: Escaping and Un-Escaping of string values
+	* ADD: A simple "Dirty" concept to properties of an object and GetDirtyyJSONString to generate a JSON containing only changed properties
+	* ADD: Indexing of stings which increases success rate to >95% but has also impact on performance with large JSON Data
+	* ADD: Options for ParseJSONString to turn on/off features which change speed and quality of parser
 * 04.02.2019
-    * CHANGE: Improvements to the README.md
+	* CHANGE: Improvements to the README.md
 * 02.02.2019
-    * Full rework of the Library (more functional and organized)
+	* Full rework of the Library (more functional and organized)
 	* FIX: Infinity Loops with nested arrays
 	* FIX: Support for escaped characters
 	* ADD: Example Singleton for testing the Library out and understanding how to use it

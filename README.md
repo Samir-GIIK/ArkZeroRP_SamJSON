@@ -7,12 +7,13 @@ SamJSON is a JSON Library that was created to be used by Modders of UnrealEngine
 
 ## Features
 * You can **Parse a JSON String into a SamJSON Object** and get all the Properties or Array Items from it using the provided _GetPropertyAsX/GetArrayAsX_ functions
-* You can **Create a new empty SamJSON Object**, populate it with data using one of the _AddXProperty/AddXToArray_ functions and **generate a JSON string** out of it by calling _GetJSONString_
-* You can **Change values of Properties** of a existing SamJSON object by using the provided _SetXProperty_ functions
+* You can **Create a new empty SamJSON Object**, populate it with data using one of the _AddXProperty/AddXToArray_ functions and **generate a JSON string** out of it by calling _GetJSON_
+* You can **Change values of Properties** of a existing SamJSON object by using the provided _AddXProperty_ functions or _GetProperty_ + _SetXValue_
 * Dirty Properties - generate a JSON string that contain only properties that had their values changed after the initial parse
 * PrettyPrint - generate a nicely formated JSON string to print to logs, console or UI
 
-![](Screenshot_2.png)
+![](Screenshot_2_0.png)
+![](Screenshot_2_1.png)
 
 ## Getting Started
 
@@ -25,28 +26,22 @@ UnrealEngine (Full or the DevKit of one of the supported games)
 ### Installing
 
 * Clone or Download the assets from Git
-* Copy the folder ArkZeroRP to your "Mods" folder so that you have the following structure "*/Game/Mods/ArkZeroRP/SamJSON/*"
-* Start your Engine/DevKit and navigate to "/Game/Mods/ArkZeroRP/SamJSON" (you should see two Blueprints and two Folders)
+* Copy the folder ArkZeroRP to your "Mods" folder so that you have the following structure "*/Game/Mods/ArkZeroRP/Standalone/SamJSON/*"
+* Start your Engine/DevKit and navigate to "/Game/Mods/ArkZeroRP/Standalone/SamJSON" (you should see two Blueprints and two Folders)
 * Done
 
 ### Asset List (BP - Blueprint)
 
-* /ArkZeroRP/SamJSON/SamJSON.uasset - :red_circle:REQUIRED
+* /ArkZeroRP/Standalone/SamJSON/I_SamJSON.uasset - :red_circle:REQUIRED
+  >Interface BP, Exposes all the functionalities of the SamJSON Library allowing you to pass the SamJSON object as an Object reference instead of SamJSON hard reference
+* /ArkZeroRP/Standalone/SamJSON/SamJSON.uasset - :red_circle:REQUIRED
   >The library BP based of Object
-* /ArkZeroRP/SamJSON/SamJSON_ExampleSingleton.uasset - :large_blue_circle:OPTIONAL
+* /ArkZeroRP/Standalone/SamJSON/SamJSON_ExampleSingleton.uasset - :large_blue_circle:OPTIONAL
   >Examples singleton BP based of Actor
-* /ArkZeroRP/SamJSON/Enums/SamJSON_Type.uasset - :red_circle:REQUIRED
+* /ArkZeroRP/Standalone/SamJSON/Enums/SamJSON_Type.uasset - :red_circle:REQUIRED
   >Enum BP, possible types of JSON Data
-* /ArkZeroRP/SamJSON/Enums/SamJSON_ValueErrorType.uasset - :red_circle:REQUIRED
+* /ArkZeroRP/Standalone/SamJSON/Enums/SamJSON_ValueErrorType.uasset - :red_circle:REQUIRED
   >Enum BP, possible types of Errors when using GetPropertyAsX
-* /ArkZeroRP/SamJSON/Structs/SamJSON_KeyValue.uasset - :red_circle:REQUIRED
-  >Struct BP, represents a single property as Key/Value/Type
-* /ArkZeroRP/SamJSON/Structs/Z_BoolMap.uasset - :red_circle:REQUIRED
-  >Struct BP, represents a property as Key(String)/Value(Boolean) - Used for bulk adding of properties to a SamJSON object
-* /ArkZeroRP/SamJSON/Structs/Z_NumberMap.uasset - :red_circle:REQUIRED
-  >Struct BP, represents a property as Key(String)/Value(Float) - Used for bulk adding of properties to a SamJSON object
-* /ArkZeroRP/SamJSON/Structs/Z_StringMap.uasset - :red_circle:REQUIRED
-  >Struct BP, represents a property as Key(String)/Value(String) - Used for bulk adding of properties to a SamJSON object
 
 ### Usage example
 
@@ -62,6 +57,10 @@ Create a new SamJSON Object and populate it with data
 
 ## Release History
 
+* 09.03.2019
+	* Major rework on the parsing logic to follow the JSON standards and increase parsing success over 99%
+	* ADD: Interface for the Library allowing to pas SamJSON as an Object reference and eliminating the need of casting it to SamJSON
+	* ADD: Bunch of Get Extensions making it easier to convert SamJSON Values in MaterialInstances, Textures, Colors,...
 * 08.02.2019
 	* Major rework on the parsing logic to follow the JSON standards and increase parsing success over 95%
 	* FIX: Failing to parse valid JSON with escaped characters 

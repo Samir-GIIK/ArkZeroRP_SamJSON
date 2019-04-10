@@ -17,7 +17,7 @@ SamJSON is a JSON Library that was created to be used by Modders of UnrealEngine
 
 ## Getting Started
 
-These instructions will get you a copy of the assets needed to use samJSON in your own Mod Project.
+These instructions will get you a copy of the assets needed to use SamJSON in your own Mod Project.
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ UnrealEngine (Full or the DevKit of one of the supported games)
 
 * Clone or Download the assets from Git
 * Copy the folder ArkZeroRP to your "Mods" folder so that you have the following structure "*/Game/Mods/ArkZeroRP/Standalone/SamJSON/*"
-* Start your Engine/DevKit and navigate to "/Game/Mods/ArkZeroRP/Standalone/SamJSON" (you should see two Blueprints and two Folders)
+* Start your Engine/DevKit and navigate to "/Game/Mods/ArkZeroRP/Standalone/SamJSON" (you should see 3 Blueprints and one Folders)
 * Done
 
 ### Asset List (BP - Blueprint)

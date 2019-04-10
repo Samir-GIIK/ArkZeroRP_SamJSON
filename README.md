@@ -27,7 +27,7 @@ UnrealEngine (Full or the DevKit of one of the supported games)
 
 * Clone or Download the assets from Git
 * Copy the folder ArkZeroRP to your "Mods" folder so that you have the following structure "*/Game/Mods/ArkZeroRP/Standalone/SamJSON/*"
-* Start your Engine/DevKit and navigate to "/Game/Mods/ArkZeroRP/Standalone/SamJSON" (you should see 3 Blueprints and one Folders)
+* Start your Engine/DevKit and navigate to "/Game/Mods/ArkZeroRP/Standalone/SamJSON" (you should see 3 Blueprints and 1 Folder)
 * Done
 
 ### Asset List (BP - Blueprint)

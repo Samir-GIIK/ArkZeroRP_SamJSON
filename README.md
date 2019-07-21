@@ -56,7 +56,11 @@ Create a new SamJSON Object and populate it with data
 ![](Screenshot_3.png)
 
 ## Release History
-
+* 21.07.2019
+	* Added new I_ParseJSON_Native (20x Faster) that uses the Native Json Parser to parse the data, but needs a JSON Structure string to let SamJSON know of how the JSON is built.
+    * Added some small additions in removing items and properties
+    * Added Parent tracking (know to which object a property belongs to or to which Array)
+	* Small performance improvements inside the SamJSON BP
 * 09.03.2019
 	* Major rework on the parsing logic to follow the JSON standards and increase parsing success over 99%
 	* ADD: Interface for the Library allowing to pas SamJSON as an Object reference and eliminating the need of casting it to SamJSON
